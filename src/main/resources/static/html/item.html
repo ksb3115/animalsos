@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 560px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="py-5 text-center">
+        <h2>게시글 상세</h2>
+    </div>
+    <div>
+        <label for="itemId">게시글 번호</label>
+        <input type="text" id="itemId" name="itemId" class="form-control"
+               value="1" readonly>
+    </div>
+    <div>
+        <label for="itemName">제목</label>
+        <input type="text" id="itemName" name="itemName" class="form-control"
+               value="강아지를 구조해주세요" readonly>
+    </div>
+    <div>
+        <label for="location">위치</label>
+        <input type="text" id="location" name="location" class="form-control"
+               value="포천시 소흘읍" readonly>
+    </div>
+    <div>
+        <label for="content">내용</label>
+        <input type="text" id="content" name="content" class="form-control"
+               value="소흘읍에 유기견을 도와주세요" readonly>
+    </div>
+    <hr class="my-4">
+    <div class="row">
+        <div class="col">
+            <button class="w-100 btn btn-primary btn-lg"
+                    onclick="location.href='editForm.html'" type="button">게시글 수정</button>
+        </div>
+        <div class="col">
+            <button class="w-100 btn btn-secondary btn-lg"
+                    onclick="location.href='items.html'" type="button">목록으로</button>
+        </div>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>

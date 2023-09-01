@@ -19,16 +19,16 @@
     <form action="item.html" th:action th:object="${item}" method="post">
         <div>
             <label for="itemName" th:text="#{label.item.itemName}">제목</label>
-            <input type="text" id="itemName" th:field="*{itemName}" class="formcontrol" placeholder="제목을 입력하세요">
+            <input type="text" id="itemName" th:field="*{itemName}" class="form-control" placeholder="제목을 입력하세요">
         </div>
         <div>
-            <label for="location" th:text="#{label.item.location}">위치</label>
-            <input type="text" id="location"  th:field="*{location}" name="location" class="form-control"
+            <label for="loc" th:text="#{label.item.loc}">위치</label>
+            <input type="text" id="loc"  th:field="*{loc}" name="loc" class="form-control"
                    placeholder="위치를 입력하세요">
         </div>
         <div>
             <label for="content" th:text="#{label.item.content}">내용</label>
-            <input type="text" id="content" name="content"  th:field="*{content}" class="formcontrol" placeholder="내용을 입력하세요">
+            <input type="text" id="content" name="content"  th:field="*{content}" class="form-control" placeholder="내용을 입력하세요">
         </div>
         <hr class="my-4">
         <div class="row">

@@ -25,7 +25,7 @@
             <tr>
                 <th th:text="#{label.item.id}">게시글 번호</th>
                 <th th:text="#{label.item.itemName}">제목</th>
-                <th th:text="#{label.item.location}">위치</th>
+                <th th:text="#{label.item.loc}">위치</th>
                 <th th:text="#{label.item.content}">내용</th>
             </tr>
             </thead>
@@ -33,7 +33,7 @@
             <tr th:each="item :${items}">
                 <td><a href="item.html" th:href="@{/form/items/{itemId}(itemId=${item.id})}" th:text="${item.id}">글번호</a></td>
                 <td><a href="item.html" th:href="@{/form/items/{itemId}(itemId=${item.id})}" th:text="${item.itemName}">제목</a></td>
-                <td th:text="${item.location}">서초구</td>
+                <td th:text="${item.loc}">서초구</td>
                 <td th:text="${item.content}">글내용입니다</td>
             </tr>
 

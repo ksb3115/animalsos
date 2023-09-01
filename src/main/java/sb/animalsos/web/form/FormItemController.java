@@ -39,12 +39,12 @@ public class FormItemController {
     }
     //@PostMapping("/add")
     public String addItemV1(@RequestParam String itemName,
-                       @RequestParam String location,
+                       @RequestParam String loc,
                        @RequestParam String content,
                        Model model){
         Item item = new Item();
         item.setItemName(itemName);
-        item.setLocation(location);
+        item.setLoc(loc);
         item.setContent(content);
 
         itemRepository.save(item);

@@ -13,26 +13,26 @@
 <body>
 <div class="container">
     <div class="py-5 text-center">
-        <h2>게시글 상세</h2>
+        <h2 th:text="#{page.item}">게시글 상세</h2>
     </div>
     <h2 th:if="${param.status}" th:text ="'저장완료'"></h2>
     <div>
-        <label for="itemId">게시글 번호</label>
+        <label for="itemId" th:text="#{label.item.id}">게시글 번호</label>
         <input type="text" id="itemId" name="itemId" class="form-control"
                value="1" th:value="${item.id}" readonly>
     </div>
     <div>
-        <label for="itemName">제목</label>
+        <label for="itemName" th:text="#{label.item.itemName}">제목</label>
         <input type="text" id="itemName" name="itemName" class="form-control"
                value="강아지를 구조해주세요" th:value="${item.itemName}" readonly>
     </div>
     <div>
-        <label for="location">위치</label>
+        <label for="location" th:text="#{label.item.location}">위치</label>
         <input type="text" id="location" name="location" class="form-control"
                value="포천시 소흘읍" th:value="${item.location}"readonly>
     </div>
     <div>
-        <label for="content">내용</label>
+        <label for="content" th:text="#{label.item.content}">내용</label>
         <input type="text" id="content" name="content" class="form-control"
                value="소흘읍에 유기견을 도와주세요" th:value="${item.content}"readonly>
     </div>
@@ -41,14 +41,14 @@
         <div class="col">
             <button class="w-100 btn btn-primary btn-lg"
                     onclick="location.href='editForm.html'"
-                    th:onclick="|location.href='@{/basic/items/{itemId}/edit(itemId=${item.id})}'|"
-                    type="button">게시글 수정</button>
+                    th:onclick="|location.href='@{/form/items/{itemId}/edit(itemId=${item.id})}'|"
+                    type="button" th:text="#{page.updateItem}">게시글 수정</button>
         </div>
         <div class="col">
             <button class="w-100 btn btn-secondary btn-lg"
                     onclick="location.href='items.html'"
-                    th:onclick="|location.href='@{/basic/items}'|"
-                    type="button">목록으로</button>
+                    th:onclick="|location.href='@{/form/items}'|"
+                    type="button" th:text="#{page.items}">목록으로</button>
         </div>
     </div>
 </div> <!-- /container -->

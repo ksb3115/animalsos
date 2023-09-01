@@ -14,7 +14,7 @@
     <div class="py-5 text-center">
         <h2>게시글 수정 </h2>
     </div>
-    <form action="item.html" method="post">
+    <form action="item.html" th:action th:object="${item}" method="post">
         <div>
             <label for="id">게시글 번호</label>
             <input type="text" id="id" name="id" class="form-control" value="1"

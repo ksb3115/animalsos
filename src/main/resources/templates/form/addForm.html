@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/bootstrap.min.css}"
+          href="../css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            max-width: 560px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="py-5 text-center">
+        <h2 th:text="#{page.addItem}">게시글 작성</h2>
+    </div>
+    <h4 class="mb-3">게시글 입력</h4>
+    <form action="item.html" th:action th:object="${item}" method="post">
+        <div>
+            <label for="itemName" th:text="#{label.item.itemName}">제목</label>
+            <input type="text" id="itemName" th:field="*{itemName}" class="formcontrol" placeholder="제목을 입력하세요">
+        </div>
+        <div>
+            <label for="location" th:text="#{label.item.location}">위치</label>
+            <input type="text" id="location"  th:field="*{location}" name="location" class="form-control"
+                   placeholder="위치를 입력하세요">
+        </div>
+        <div>
+            <label for="content" th:text="#{label.item.content}">내용</label>
+            <input type="text" id="content" name="content"  th:field="*{content}" class="formcontrol" placeholder="내용을 입력하세요">
+        </div>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col">
+                <button class="w-100 btn btn-primary btn-lg" type="submit" th:text="#{button.save}">저장</button>
+            </div>
+            <div class="col">
+                <button class="w-100 btn btn-secondary btn-lg"
+                        onclick="location.href='items.html'"
+                        th:onclick="|location.href='@{/form/items}'|"
+                        type="button" th:text="#{button.cancel}">취소</button>
+            </div>
+        </div>
+    </form>
+</div> <!-- /container -->
+</body>
+</html>

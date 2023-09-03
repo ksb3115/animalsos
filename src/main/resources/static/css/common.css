@@ -1,0 +1,108 @@
+/* =================================================================== 
+Common
+=================================================================== */
+* {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================================================== 
+Header
+=================================================================== */
+header {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #D1D1D1;
+}
+
+.header_wrapper {
+    max-width: 1200px;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header_wrapper .header_left,
+.header_wrapper .header_right {
+    width: 50%;
+}
+
+.header_wrapper .header_left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.header_left .logo {
+    margin-right: 20px;
+}
+
+.header_left .logo a {
+
+}
+
+.header_left .logo a img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+    
+.header_left .menu {
+
+}
+
+.header_left .menu ul {
+}
+
+.header_left .menu ul  li {
+
+}
+
+.header_left .menu ul  li a {
+    padding: 4px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header_right ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.header_right ul li:not(:last-child) {
+    margin-right: 10px;
+}
+.header_right ul li a {
+    font-size: 18px;
+    font-weight: 700;
+    padding: 4px;
+}
+
+
+
+
+
+
+
+
+/* =================================================================== 
+footer 
+=================================================================== */

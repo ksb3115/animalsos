@@ -8,6 +8,11 @@
         .container {
             max-width: 560px;
         }
+
+        .field-error {
+            border-color: #dc3545;
+            color: #dc3545;
+        }
     </style>
 </head>
 <body>
@@ -22,15 +27,27 @@
         </div>
         <div>
             <label for="itemName" th:text="#{label.item.itemName}">제목</label>
-            <input type="text" id="itemName" name="itemName" class="form-control" th:field="*{itemName}">
+            <input type="text" id="itemName" th:field="*{itemName}"
+                   th:errorclass="field-error" class="form-control" placeholder="제목을 입력하세요">
+            <div class="field-error" th:errors="*{itemName}">
+                제목은 필수입니다.
+            </div>
         </div>
         <div>
             <label for="loc" th:text="#{label.item.loc}">위치</label>
-            <input type="text" id="loc" name="loc" class="form-control" th:value="${item.loc}">
+            <input type="text" id="loc" th:field="*{loc}"
+                   th:errorclass="field-error" class="form-control" placeholder="위치를 입력하세요">
+            <div class="field-error" th:errors="*{loc}">
+                위치는 필수입니다.
+            </div>
         </div>
         <div>
             <label for="content" th:text="#{label.item.content}">내용</label>
-            <input type="text" id="content" name="content" class="form-control" th:value="${item.content}">
+            <input type="text" id="content" th:field="*{content}"
+                   th:errorclass="field-error" class="form-control" placeholder="내용을 입력하세요">
+            <div class="field-error" th:errors="*{content}">
+                내용은 필수입니다.
+            </div>
         </div>
         <hr class="my-4">
         <div class="row">

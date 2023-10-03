@@ -36,6 +36,8 @@
         <input type="text" id="content" name="content" class="form-control"
                value="소흘읍에 유기견을 도와주세요" th:value="${item.content}"readonly>
     </div>
+    이미지 파일:
+    <img th:each="imageFile : ${item.imageFiles}" th:src="|/form/items/images/${imageFile.getStoreFileName()}|" width="300" height="300"/>
     <hr class="my-4">
     <div class="row">
         <div class="col">

@@ -20,7 +20,7 @@
         <h2 th:text="#{page.addItem}">게시글 작성</h2>
     </div>
     <h4 class="mb-3">게시글 입력</h4>
-    <form action="item.html" th:action th:object="${item}" method="post">
+    <form action="item.html" th:action th:object="${item}" enctype="multipart/form-data" method="post">
         <div>
             <label for="itemName" th:text="#{label.item.itemName}">제목</label>
             <input type="text" id="itemName" th:field="*{itemName}"
@@ -45,6 +45,10 @@
                 내용은 필수입니다.
             </div>
         </div>
+        <ul>
+            <!--<li>첨부파일<input type="file" name="attachFile"></li> -->
+            <li>이미지 파일<input type="file" multiple="multiple" name="imageFiles"></li>
+        </ul>
         <hr class="my-4">
         <div class="row">
             <div class="col">

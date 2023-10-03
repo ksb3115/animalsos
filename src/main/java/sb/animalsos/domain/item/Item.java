@@ -2,6 +2,8 @@ package sb.animalsos.domain.item;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class Item {
 
@@ -12,6 +14,10 @@ public class Item {
     private String loc;
 
     private String content;
+
+    private UploadFile attachFile;
+
+    private List<UploadFile> imageFiles;
 
     public Item(){
 

@@ -34,13 +34,10 @@ pipeline {
         stage('Bulid Gradle') {
           agent any
           steps {
-            echo 'Bulid Gradle'
-            dir ('.'){
                 sh """
-		chmod +x gradelw
+		chmod +x gradlew
                 ./gradlew clean build
                 """
-            }
           }
           post {
             failure {
